@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 
-
+#for getting house details from source code
 def get_house_data(page_source,filename="output.xlsx"):
     soup=BeautifulSoup(page_source,'html5lib')
     soup=soup.find_all('div',attrs={'class':'filter-property-list detailurl'})
